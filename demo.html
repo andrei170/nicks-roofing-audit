@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nick's Roofing — Roofers in Hayward &amp; the East Bay | Lic. 1119278</title>
+<style>
+:root{--ink:#0e1419;--body:#3a444f;--muted:#6c7783;--faint:#98a2ad;--paper:#fff;--ground:#f5f7f9;--panel:#e9edf1;
+--rule:#dce2e8;--rule-2:#c1cad4;--deep:#13303f;--deep-2:#1d4b62;--soft:#e7eff3;--sun:#c26a12;--sun-soft:#fcf1e5;
+--shadow:0 1px 2px rgba(14,20,25,.05),0 12px 32px -20px rgba(14,20,25,.34);--shadow-lg:0 2px 4px rgba(14,20,25,.06),0 22px 48px -24px rgba(14,20,25,.4);}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.62 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:600;letter-spacing:-.005em}p{margin:0 0 15px}a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 26px}
+.demo-note{background:var(--sun-soft);border-bottom:1px solid #eed7bd;color:#7d4310;font-size:13px;text-align:center;padding:9px 20px}
+.topbar{background:var(--deep);color:#fff;font-size:13.5px}
+.topbar .wrap{display:flex;flex-wrap:wrap;gap:6px 24px;align-items:center;justify-content:space-between;padding:9px 26px}
+.topbar .l{color:#b5cad5;font-size:12.5px}.topbar a{color:#fff;text-decoration:none;font-weight:700}.topbar a:hover{color:#ffc98d}
+nav{background:var(--paper);border-bottom:1px solid var(--rule);position:sticky;top:0;z-index:40}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:18px;padding-top:13px;padding-bottom:13px}
+.brand{text-decoration:none;line-height:1.15}.brand .bn{font-family:Georgia,serif;font-size:19px;font-weight:700;color:var(--deep);display:block}
+.brand .bs{font-size:10.5px;letter-spacing:.11em;text-transform:uppercase;color:var(--muted)}
+.navlinks{display:flex;gap:22px;font-size:14.5px}.navlinks a{text-decoration:none;color:var(--body)}.navlinks a:hover{color:var(--deep)}
+@media(max-width:920px){.navlinks{display:none}}
+.btn{display:inline-block;background:var(--sun);color:#fff;text-decoration:none;font-weight:700;padding:11px 20px;border-radius:4px;font-size:14.5px;border:none;cursor:pointer;transition:transform .12s ease,box-shadow .12s ease}
+.btn:hover{transform:translateY(-1px);box-shadow:0 6px 18px -8px rgba(194,106,18,.7)}
+.btn.big{padding:15px 28px;font-size:16px;width:100%}
+.btn.ghost{background:transparent;border:2px solid rgba(255,255,255,.55);color:#fff}.btn.ghost:hover{background:rgba(255,255,255,.1);box-shadow:none}
+.hero{position:relative;background:var(--deep);color:#fff;overflow:hidden}
+.hero .bg{position:absolute;inset:0;background-image:linear-gradient(102deg,rgba(7,22,30,.95) 0%,rgba(7,22,30,.87) 48%,rgba(7,22,30,.48) 100%),url('img/job-3.jpg');background-size:cover;background-position:center 45%}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:50px;padding-top:56px;padding-bottom:56px;align-items:center}
+@media(max-width:900px){.hero .wrap{grid-template-columns:1fr;gap:30px;padding-top:40px;padding-bottom:40px}}
+.tag{display:inline-block;background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.28);color:#fff;font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;font-weight:700;padding:5px 12px;border-radius:3px;margin-bottom:18px}
+.hero h1{font-size:clamp(30px,4.7vw,48px);line-height:1.09;margin:0 0 17px;color:#fff}
+.hero .dek{font-size:18px;color:#c5d7e0;max-width:50ch;margin-bottom:21px}
+.hero ul{list-style:none;padding:0;margin:0}
+.hero ul li{padding-left:26px;position:relative;margin-bottom:9px;font-size:15.5px;color:#dae7ec}
+.hero ul li::before{content:"";position:absolute;left:0;top:8px;width:11px;height:11px;border-left:2.5px solid var(--sun);border-bottom:2.5px solid var(--sun);transform:rotate(-45deg)}
+.card{background:var(--paper);border-radius:8px;box-shadow:var(--shadow-lg);padding:26px;color:var(--ink)}
+.card h3{margin:0 0 4px;font-size:21px}.card .cs{font-size:13.5px;color:var(--muted);margin:0 0 17px;line-height:1.5}
+.fg{margin-bottom:12px}.fg label{display:block;font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);margin-bottom:5px}
+.fg input,.fg select{width:100%;padding:11px 12px;border:1px solid var(--rule-2);border-radius:4px;font-size:15px;font-family:inherit;background:var(--paper);color:var(--ink)}
+.fg input:focus,.fg select:focus{outline:2px solid var(--deep-2);outline-offset:-1px;border-color:var(--deep-2)}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:11px}@media(max-width:420px){.frow{grid-template-columns:1fr}}
+.fnote{font-size:12px;color:var(--faint);margin:11px 0 0;text-align:center;line-height:1.5}
+.trust{background:var(--ground);border-bottom:1px solid var(--rule)}
+.trust .wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(165px,1fr));gap:20px 30px;padding-top:24px;padding-bottom:24px}
+.ti{text-align:center}.ti b{display:block;font-family:Georgia,serif;font-size:21px;color:var(--deep)}
+.ti span{font-size:12.5px;color:var(--muted);line-height:1.45;display:block;margin-top:3px}
+section{padding:64px 0}section.tint{background:var(--ground);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.eyebrow{font-size:11.5px;letter-spacing:.15em;text-transform:uppercase;color:var(--sun);font-weight:700;margin-bottom:11px}
+h2{font-size:clamp(25px,3.6vw,36px);line-height:1.15;margin:0 0 16px}
+.lede{font-size:17.5px;color:var(--muted);max-width:62ch;margin-bottom:32px}
+.center{text-align:center}.center .lede{margin-left:auto;margin-right:auto}
+.svcs{display:grid;grid-template-columns:repeat(auto-fit,minmax(258px,1fr));gap:20px}
+.svc{border-radius:8px;overflow:hidden;background:var(--paper);border:1px solid var(--rule);box-shadow:var(--shadow);transition:transform .13s ease,box-shadow .13s ease}
+.svc:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg)}
+.svc .im{height:166px;background-size:cover;background-position:center}
+.svc .bd{padding:20px 21px 22px}.svc h3{margin:0 0 8px;font-size:18px}.svc p{font-size:14.5px;color:var(--body);margin:0}
+.spec{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.spec span{font-size:11.5px;font-weight:700;background:var(--soft);color:var(--deep);padding:3px 9px;border-radius:3px}
+.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(225px,1fr));gap:12px}
+.gt{height:196px;background-size:cover;background-position:center;border-radius:6px;box-shadow:var(--shadow)}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);border-radius:8px;overflow:hidden}
+.step{background:var(--paper);padding:24px 22px}
+.step .n{width:31px;height:31px;border-radius:50%;background:var(--deep);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;margin-bottom:13px}
+.step h3{font-size:16.5px;margin:0 0 7px}.step p{font-size:14px;color:var(--body);margin:0}
+.pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.pills span{background:var(--paper);border:1px solid var(--rule-2);color:var(--body);font-size:13.5px;padding:6px 13px;border-radius:99px}
+.cta{position:relative;color:#fff;overflow:hidden;padding:0}
+.cta .bg{position:absolute;inset:0;background-image:linear-gradient(rgba(7,22,30,.9),rgba(7,22,30,.9)),url('img/job-5.jpg');background-size:cover;background-position:center}
+.cta .wrap{position:relative;padding-top:66px;padding-bottom:66px;text-align:center}
+.cta h2{color:#fff}.cta .lede{color:#c2d4dd;margin-left:auto;margin-right:auto}
+.ctabtns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:4px}
+footer{background:#07161e;color:#899ba4;font-size:13.5px;padding:42px 0 32px}
+footer .wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(205px,1fr));gap:28px}
+footer h4{color:#fff;font-size:12px;letter-spacing:.11em;text-transform:uppercase;margin:0 0 12px;font-family:inherit;font-weight:700}
+footer a{color:#b3c4cc;text-decoration:none}footer a:hover{color:#fff}
+footer ul{list-style:none;padding:0;margin:0}footer li{margin-bottom:8px}
+.legal{border-top:1px solid #152b36;margin-top:32px;padding-top:19px;font-size:12.5px;color:#697f89;line-height:1.7}
+.lic{background:var(--deep-2);color:#fff;text-align:center;padding:11px 20px;font-size:13.5px;letter-spacing:.03em}
+.lic b{font-weight:700}
+.callbar{position:fixed;left:0;right:0;bottom:0;background:var(--sun);z-index:60;display:none}
+.callbar a{display:block;text-align:center;color:#fff;text-decoration:none;font-weight:700;padding:15px;font-size:16.5px}
+@media(max-width:700px){.callbar{display:block}body{padding-bottom:54px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style></head><body>
+
+<div class="demo-note"><strong>Concept demo</strong> &middot; built by AG1 Consulting for Nick Aroma, 21 August 2026 &middot; licence number and estimate form added</div>
+
+<div class="topbar"><div class="wrap">
+  <span class="l">Hayward &middot; San Leandro &middot; Castro Valley &middot; Union City &middot; Fremont</span>
+  <span>Call <a href="tel:+15108154451">(510) 815-4451</a></span>
+</div></div>
+
+<nav><div class="wrap">
+  <a class="brand" href="#top"><span class="bn">Nick's Roofing</span><span class="bs">Family owned &middot; Hayward, CA</span></a>
+  <div class="navlinks"><a href="#services">Services</a><a href="#work">Our work</a><a href="#commercial">Commercial</a><a href="#process">How it works</a></div>
+  <a class="btn" href="#estimate">Free estimate</a>
+</div></nav>
+
+<header class="hero" id="top">
+  <div class="bg"></div>
+  <div class="wrap">
+    <div>
+      <span class="tag">Hayward &amp; the East Bay</span>
+      <h1>Family owned. Twenty years on East Bay roofs.</h1>
+      <p class="dek">Shingle, tile, metal, TPO and PVC. Repairs, replacements, skylights, coatings and
+      storm damage, for homes and commercial buildings across Hayward and the East Bay.</p>
+      <ul>
+        <li>California licence 1119278, active and bonded</li>
+        <li>Free estimate, and a written scope before any work</li>
+        <li>Residential and commercial roof systems in-house</li>
+      </ul>
+    </div>
+    <div class="card" id="estimate">
+      <h3>Free estimate</h3>
+      <p class="cs">Tell us about the roof and Nick will come back to you. A real form, so you can
+      send it in under a minute.</p>
+      <form onsubmit="event.preventDefault();this.innerHTML='<div style=&quot;text-align:center;padding:32px 8px&quot;><div style=&quot;font-family:Georgia,serif;font-size:21px;color:#13303f;margin-bottom:8px&quot;>Thanks — that\'s with Nick.</div><p style=&quot;color:#6c7783;font-size:14.5px;margin:0&quot;>Demonstration form. On the live site this would reach Nick by text and email within seconds.</p></div>';">
+        <div class="fg"><label for="job">What do you need?</label>
+          <select id="job" required><option value="">Please select…</option>
+          <option>Roof leak — urgent</option><option>Storm damage</option>
+          <option>Roof repair</option><option>Full roof replacement</option>
+          <option>Skylight install or repair</option><option>Roof coating</option>
+          <option>Commercial roof (TPO / PVC)</option><option>Not sure — needs inspecting</option></select></div>
+        <div class="frow">
+          <div class="fg"><label for="rtype">Roof type</label><select id="rtype" required><option value="">Select…</option>
+          <option>Composition shingle</option><option>Tile</option><option>Metal</option><option>Flat / TPO / PVC</option>
+          <option>Not sure</option></select></div>
+          <div class="fg"><label for="ptype">Property</label><select id="ptype" required><option value="">Select…</option>
+          <option>Single family home</option><option>Townhouse or condo</option><option>Multi-unit</option>
+          <option>Commercial building</option></select></div>
+        </div>
+        <div class="frow">
+          <div class="fg"><label for="nm">Name</label><input id="nm" type="text" required></div>
+          <div class="fg"><label for="ph">Phone</label><input id="ph" type="tel" required></div>
+        </div>
+        <div class="fg"><label for="addr">Property address or ZIP</label><input id="addr" type="text" placeholder="94545" required></div>
+        <button class="btn big" type="submit">Get my free estimate</button>
+        <p class="fnote">Leaking right now? Call (510) 815-4451.</p>
+      </form>
+    </div>
+  </div>
+</header>
+
+<div class="lic">California Contractors State Licence Board &middot; <b>Licence No. 1119278</b> &middot; Active &middot; $25,000 bond</div>
+
+<div class="trust"><div class="wrap">
+  <div class="ti"><b>20 yrs</b><span>Roofing in the Hayward area</span></div>
+  <div class="ti"><b>Licensed</b><span>CSLB 1119278, active &amp; bonded</span></div>
+  <div class="ti"><b>Family owned</b><span>Nick is on the job, not just the invoice</span></div>
+  <div class="ti"><b>Res &amp; Com</b><span>Homes and commercial buildings</span></div>
+</div></div>
+
+<section id="services">
+  <div class="wrap">
+    <div class="eyebrow">Services</div>
+    <h2>Every roof system on one crew.</h2>
+    <p class="lede">Most East Bay roofers do shingle and stop there. We run tile, metal and commercial
+    flat systems as well, which means we can tell you what your roof actually needs instead of what we
+    happen to install.</p>
+    <div class="svcs">
+      <div class="svc"><div class="im" style="background-image:url('img/job-1.jpg')"></div><div class="bd">
+        <h3>Roof replacement</h3><p>Full tear-off and replacement in composition shingle, tile or metal. Decking checked and repaired before anything new goes on.</p>
+        <div class="spec"><span>SHINGLE</span><span>TILE</span><span>METAL</span></div></div></div>
+      <div class="svc"><div class="im" style="background-image:url('img/job-2.jpg')"></div><div class="bd">
+        <h3>Roof repairs</h3><p>Leaks, slipped and cracked tiles, flashing and valley work. We find the actual source rather than sealing the nearest suspicious spot.</p>
+        <div class="spec"><span>LEAK TRACING</span><span>FLASHING</span></div></div></div>
+      <div class="svc"><div class="im" style="background-image:url('img/job-4.jpg')"></div><div class="bd">
+        <h3>Storm damage</h3><p>Emergency make-safe and full repair after wind and storm damage, with photographs documented for your insurer.</p>
+        <div class="spec"><span>EMERGENCY</span><span>INSURANCE PHOTOS</span></div></div></div>
+      <div class="svc"><div class="im" style="background-image:url('img/job-6.jpg')"></div><div class="bd">
+        <h3>Skylights &amp; coatings</h3><p>Skylight installation and replacement, plus protective roof coatings that add years to a serviceable roof rather than replacing it early.</p>
+        <div class="spec"><span>SKYLIGHTS</span><span>COATINGS</span></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="tint" id="work">
+  <div class="wrap">
+    <div class="eyebrow">Recent work</div>
+    <h2>East Bay roofs, ours.</h2>
+    <p class="lede">Photographed on site across Hayward and the surrounding cities.</p>
+    <div class="gal">
+      <div class="gt" style="background-image:url('img/job-1.jpg')"></div>
+      <div class="gt" style="background-image:url('img/job-2.jpg')"></div>
+      <div class="gt" style="background-image:url('img/job-4.jpg')"></div>
+      <div class="gt" style="background-image:url('img/job-5.jpg')"></div>
+      <div class="gt" style="background-image:url('img/job-6.jpg')"></div>
+      <div class="gt" style="background-image:url('img/job-7.jpg')"></div>
+    </div>
+  </div>
+</section>
+
+<section id="commercial">
+  <div class="wrap">
+    <div class="eyebrow">Commercial</div>
+    <h2>TPO and PVC for East Bay property managers.</h2>
+    <p class="lede">Flat and low-slope commercial roofing, scheduled around your tenants and your
+    trading hours.</p>
+    <div class="steps">
+      <div class="step"><div class="n">·</div><h3>Single-ply systems</h3><p>TPO and PVC installation, repair and recover for warehouses, retail units and multi-tenant buildings.</p></div>
+      <div class="step"><div class="n">·</div><h3>Condition reports</h3><p>Photographed roof surveys you can put in front of an owner or a board before budgeting works.</p></div>
+      <div class="step"><div class="n">·</div><h3>Licensed &amp; bonded</h3><p>CSLB 1119278, active, with a $25,000 bond. Documentation supplied for vendor onboarding.</p></div>
+      <div class="step"><div class="n">·</div><h3>Coatings</h3><p>Restoration coatings that extend a serviceable commercial roof instead of a full replacement.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="tint" id="process">
+  <div class="wrap">
+    <div class="eyebrow">How it works</div>
+    <h2>Four steps, and you know the price before we start.</h2>
+    <div class="steps">
+      <div class="step"><div class="n">1</div><h3>Send the details</h3><p>Fill in the form or call. Leaks get answered first.</p></div>
+      <div class="step"><div class="n">2</div><h3>Free inspection</h3><p>We get on the roof, photograph it, and tell you honestly what it needs.</p></div>
+      <div class="step"><div class="n">3</div><h3>Written estimate</h3><p>Scope, materials, timeline and price in writing before any work starts.</p></div>
+      <div class="step"><div class="n">4</div><h3>Done and cleaned up</h3><p>Job completed to schedule, debris hauled away, magnet swept for nails.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Areas we serve</div>
+    <h2>Hayward and across the East Bay.</h2>
+    <div class="pills">
+      <span>Hayward</span><span>San Leandro</span><span>Castro Valley</span><span>Union City</span>
+      <span>Fremont</span><span>Newark</span><span>San Lorenzo</span><span>Alameda</span>
+      <span>Oakland</span><span>Dublin</span><span>Pleasanton</span><span>Livermore</span>
+      <span>Milpitas</span><span>Sunol</span>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="bg"></div>
+  <div class="wrap">
+    <h2>Get your free roof estimate.</h2>
+    <p class="lede">We will inspect it, photograph it and give you a written price. If it does not need
+    replacing yet, we will tell you that too.</p>
+    <div class="ctabtns"><a class="btn" href="#estimate">Free estimate</a>
+      <a class="btn ghost" href="tel:+15108154451">Call (510) 815-4451</a></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div><h4>Nick's Roofing</h4><p style="margin:0 0 8px">Family-owned roofing contractor serving Hayward and the East Bay for over twenty years.</p>
+      <p style="margin:0"><strong style="color:#fff">CSLB Licence No. 1119278</strong> &middot; Bonded &amp; insured</p></div>
+    <div><h4>Services</h4><ul><li><a href="#services">Roof replacement</a></li><li><a href="#services">Roof repairs</a></li>
+      <li><a href="#services">Storm damage</a></li><li><a href="#commercial">Commercial TPO &amp; PVC</a></li></ul></div>
+    <div><h4>Areas</h4><ul><li>Hayward</li><li>San Leandro &amp; Castro Valley</li><li>Union City &amp; Fremont</li><li>Oakland &amp; Alameda</li></ul></div>
+    <div><h4>Contact</h4><ul><li><a href="tel:+15108154451">(510) 815-4451</a></li>
+      <li><a href="mailto:Nick@nicksroofingservices.com">Nick@nicksroofingservices.com</a></li>
+      <li>27517 Orlando Ave, Hayward, CA 94545</li>
+      <li>Mon–Fri 8am–5pm &middot; Sat 9am–12pm</li></ul></div>
+  </div>
+  <div class="wrap"><div class="legal">
+    Concept demonstration produced by AG1 Consulting on 21 August 2026 for discussion with Nick Aroma.
+    Photography is taken from Nick's Roofing's existing website. Licence number, status and bond amount
+    are as published on public California contractor records and should be confirmed before live use.
+    Not a live website.
+  </div></div>
+</footer>
+<div class="callbar"><a href="tel:+15108154451">Call Nick's Roofing &middot; (510) 815-4451</a></div>
+</body></html>
