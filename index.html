@@ -1,240 +1,270 @@
-<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Nick's Roofing — Online Presence Audit</title>
-<style>
-:root{--ink:#11161c;--body:#3b4550;--muted:#6c7783;--faint:#98a2ad;--paper:#fff;--ground:#f4f6f8;--panel:#eceff3;
---rule:#dde2e8;--rule-2:#c2cad4;--slate:#1f3b52;--f:#b3261e;--f-soft:#fbeae9;--d:#b0670a;--d-soft:#fdf1e0;
---c:#8a7407;--c-soft:#fbf5dd;--a:#1a6444;--a-soft:#e3f0ea;--shadow:0 1px 2px rgba(17,22,28,.05),0 10px 28px -18px rgba(17,22,28,.3);}
-*{box-sizing:border-box}body{margin:0;background:var(--ground);color:var(--ink);font:16px/1.62 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
-.wrap{max-width:940px;margin:0 auto;padding:0 24px 84px}h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:600}p{margin:0 0 14px}
-.mast{padding:50px 0 0}.eyebrow{font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--slate);font-weight:700}
-h1{font-size:clamp(31px,5.2vw,48px);line-height:1.07;margin:13px 0 0;letter-spacing:-.01em}
-.sub{color:var(--muted);font-size:17px;margin:14px 0 0;max-width:62ch}
-.meta{display:flex;flex-wrap:wrap;gap:6px 22px;margin-top:19px;font-size:12.5px;color:var(--faint)}.meta b{color:var(--body);font-weight:600}
-.grade{display:grid;grid-template-columns:auto 1fr;gap:26px;align-items:center;background:var(--paper);border:1px solid var(--rule);border-radius:6px;padding:26px 28px;margin:28px 0 0;box-shadow:var(--shadow)}
-@media(max-width:600px){.grade{grid-template-columns:1fr;gap:16px}}
-.badge{width:116px;height:116px;border-radius:6px;background:var(--f-soft);border:2px solid var(--f);display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--f)}
-.badge .g{font-family:Georgia,serif;font-size:52px;line-height:1;font-weight:700}.badge .s{font-size:12px;letter-spacing:.06em;margin-top:5px;font-weight:700}
-.grade h2{margin:0 0 8px;font-size:22px}.grade p{margin:0;color:var(--body);font-size:15px}
-.finds{display:grid;grid-template-columns:repeat(auto-fit,minmax(205px,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);border-radius:6px;margin:22px 0 0;overflow:hidden}
-.find{background:var(--paper);padding:18px}.find .n{font-family:Georgia,serif;font-size:29px;line-height:1.1;color:var(--f);font-weight:700}
-.find .n.ok{color:var(--a)}.find .l{font-size:13px;color:var(--body);margin-top:8px;line-height:1.45}
-section{margin-top:50px}.sec-h{border-top:2px solid var(--ink);padding-top:12px;margin-bottom:6px}h2.sec{font-size:clamp(21px,3vw,27px);margin:0}
-.lede{color:var(--muted);font-size:16px;margin:8px 0 20px;max-width:66ch}
-.tw{overflow-x:auto;border:1px solid var(--rule);border-radius:6px;background:var(--paper);box-shadow:var(--shadow)}
-table{border-collapse:collapse;width:100%;min-width:650px;font-size:14.5px}
-th{background:var(--panel);text-align:left;padding:11px 14px;font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);font-weight:700;border-bottom:1px solid var(--rule-2)}
-td{padding:13px 14px;border-bottom:1px solid var(--rule);vertical-align:top;line-height:1.5}tbody tr:last-child td{border-bottom:none}
-td.cat{font-weight:600;width:22%}td.sc{width:70px;white-space:nowrap;font-weight:700;font-variant-numeric:tabular-nums}
-.pill{display:inline-block;font-size:11.5px;font-weight:700;padding:2px 8px;border-radius:3px}
-.p-f{background:var(--f-soft);color:var(--f)}.p-d{background:var(--d-soft);color:var(--d)}.p-c{background:var(--c-soft);color:var(--c)}.p-a{background:var(--a-soft);color:var(--a)}
-.call{background:var(--paper);border:1px solid var(--rule);border-left:4px solid var(--f);border-radius:0 6px 6px 0;padding:20px 22px;margin:22px 0;box-shadow:var(--shadow)}
-.call.good{border-left-color:var(--a)}.call.slate{border-left-color:var(--slate)}
-.call-l{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--f);display:block;margin-bottom:8px}
-.call.good .call-l{color:var(--a)}.call.slate .call-l{color:var(--slate)}.call p:last-child{margin-bottom:0}
-code{background:var(--panel);padding:1.5px 6px;border-radius:3px;font-size:13px;font-family:ui-monospace,Consolas,monospace;color:var(--slate)}
-ul{margin:0 0 16px;padding-left:22px}li{margin-bottom:9px}strong{font-weight:650}
-.pri{counter-reset:p;margin:20px 0 0;padding:0;list-style:none}
-.pri li{counter-increment:p;position:relative;padding:16px 18px 16px 58px;background:var(--paper);border:1px solid var(--rule);border-radius:6px;margin-bottom:10px;box-shadow:var(--shadow)}
-.pri li::before{content:counter(p);position:absolute;left:17px;top:16px;width:26px;height:26px;background:var(--slate);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;font-family:-apple-system,sans-serif}
-.pri h4{margin:0 0 5px;font-size:16px;font-family:Georgia,serif}.pri p{margin:0;font-size:14px;color:var(--body)}
-footer{margin-top:58px;padding-top:20px;border-top:2px solid var(--ink);font-size:12.5px;color:var(--faint);line-height:1.75}
-</style></head><body><div class="wrap">
-
-<header class="mast">
-  <div class="eyebrow">Online Presence Audit &middot; Prepared 21 August 2026</div>
-  <h1>Nick's Roofing</h1>
-  <p class="sub">You need five to ten more roofing jobs a month. This is a review of what is currently
-  standing between a Hayward homeowner searching for a roofer and your phone ringing.</p>
-  <div class="meta"><span><b>Prepared for</b> Nick Aroma</span><span><b>Hayward, California</b></span>
-  <span><b>Reviewed</b> nicksroofingservices.com</span><span><b>By</b> AG1 Consulting</span></div>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nick's Roofing — Digital Presence Audit</title><style>
+:root{--bg:#0d1117;--panel:#161b22;--ink:#e6edf3;--mut:#9aa7b4;--line:#2a3340;--accent:#2f81f7;
+  --good:#3fb950;--bad:#f85149;--gradF:#f85149;--gradD:#e8702a;--gradC:#d29922;--gradB:#3fb950;--gradA:#2ea043;}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.5;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+.eyebrow{letter-spacing:.18em;text-transform:uppercase;font-size:12px;color:var(--mut);font-weight:600}
+header{padding:46px 0 28px;border-bottom:1px solid var(--line);background:radial-gradient(1200px 400px at 70% -10%,rgba(47,129,247,.18),transparent)}
+h1{font-size:30px;font-weight:800;margin:10px 0 6px;letter-spacing:-.01em}
+.sub{color:var(--mut);font-size:15px}
+.hero{display:grid;grid-template-columns:300px 1fr;gap:26px;align-items:center;margin:34px 0 8px}
+@media(max-width:760px){.hero{grid-template-columns:1fr}}
+.gradecard{border:1px solid var(--line);border-radius:18px;padding:26px;text-align:center;position:relative;overflow:hidden}
+.gc-F{background:linear-gradient(160deg,#2a1410,#1c2330)}.gc-D{background:linear-gradient(160deg,#2a1c10,#1c2330)}
+.gc-C{background:linear-gradient(160deg,#2a2410,#1c2330)}.gc-B{background:linear-gradient(160deg,#102a1a,#1c2330)}
+.bigletter{font-size:96px;font-weight:900;line-height:1;position:relative}
+.bl-F{color:var(--gradF);text-shadow:0 0 40px rgba(248,81,73,.45)}
+.bl-D{color:var(--gradD);text-shadow:0 0 40px rgba(232,112,42,.45)}
+.bl-C{color:var(--gradC);text-shadow:0 0 40px rgba(210,153,34,.45)}
+.score100{font-size:18px;color:var(--mut);margin-top:6px;position:relative}
+.heroread h2{font-size:21px;font-weight:800;margin-bottom:10px}
+.heroread p{color:var(--mut);font-size:15.5px}
+.heroread .tag{display:inline-block;margin-top:14px;padding:6px 12px;border:1px solid var(--line);border-radius:999px;font-size:13px;color:var(--ink);background:var(--panel)}
+section{padding:34px 0;border-bottom:1px solid var(--line)}
+.h{font-size:13px;color:var(--mut);text-transform:uppercase;letter-spacing:.14em;font-weight:700;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:760px){.grid{grid-template-columns:1fr}}
+.row{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px;display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center}
+.rname{font-weight:600;font-size:15px}
+.bar{height:7px;background:#0b0f15;border-radius:99px;margin-top:9px;overflow:hidden}
+.fill{height:100%;border-radius:99px}
+.badge{font-weight:800;font-size:15px;min-width:46px;height:46px;border-radius:10px;display:flex;align-items:center;justify-content:center;color:#0d1117}
+.gF{background:var(--gradF)}.gD{background:var(--gradD)}.gC{background:var(--gradC)}.gB{background:var(--gradB);color:#06210f}.gA{background:var(--gradA);color:#06210f}
+.sc{font-size:12px;color:var(--mut);margin-top:3px}
+.flag{background:linear-gradient(160deg,#2a1410,#161b22);border:1px solid #6f2a1f;border-radius:14px;padding:20px 22px;margin-bottom:14px}
+.flag .lab{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--bad);font-weight:700;margin-bottom:8px}
+.win{background:linear-gradient(160deg,#0f2417,#161b22);border:1px solid #1f6f3a;border-radius:14px;padding:20px 22px;margin-bottom:14px}
+.win .lab{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--good);font-weight:700;margin-bottom:8px}
+.warn{background:linear-gradient(160deg,#2a2410,#161b22);border:1px solid #6f5a1f;border-radius:14px;padding:20px 22px;margin-bottom:14px}
+.warn .lab{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--gradC);font-weight:700;margin-bottom:8px}
+.flag p,.win p,.warn p{color:var(--mut);font-size:14.5px;margin-bottom:9px}
+.flag p:last-child,.win p:last-child,.warn p:last-child{margin-bottom:0}
+.flag b,.win b,.warn b{color:var(--ink)}
+.flag ul,.win ul,.warn ul{margin:0 0 9px 20px;color:var(--mut);font-size:14.5px}
+.flag li,.win li,.warn li{margin-bottom:6px}
+.code{background:#0b0f15;border:1px solid var(--line);border-radius:8px;padding:14px 16px;margin:12px 0;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:12.5px;line-height:1.85;color:var(--mut);overflow-x:auto}
+.code .ph{color:#ff9d94;font-weight:700}.code .ok{color:#84e0a8;font-weight:700}.code .c{color:#5b6672}
+.cmp{width:100%;border-collapse:collapse;font-size:14px;background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.cmp th{text-align:left;padding:11px 14px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--mut);border-bottom:1px solid var(--line);font-weight:700}
+.cmp td{padding:11px 14px;border-bottom:1px solid var(--line);color:var(--mut);vertical-align:top}
+.cmp tr:last-child td{border-bottom:none}.cmp td b{color:var(--ink)}.cmp tr.you td{background:#241a12}
+.cmp .yes{color:var(--good);font-weight:700}.cmp .no{color:var(--bad);font-weight:700}
+.opp{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media(max-width:760px){.opp{grid-template-columns:1fr}}
+.ocard{background:linear-gradient(160deg,#0f2417,#161b22);border:1px solid #1f6f3a;border-radius:14px;padding:20px;text-align:center}
+.ocard .lab{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--mut)}
+.ocard .big{font-size:30px;font-weight:900;color:var(--good);margin:8px 0 2px}
+.ocard .small{font-size:13px;color:var(--mut)}
+.oppnote{color:var(--mut);font-size:14px;margin-top:14px}.oppnote b{color:var(--ink)}
+.arrow{display:flex;align-items:center;justify-content:center;gap:18px;margin:6px 0 2px;flex-wrap:wrap}
+.pill{font-size:60px;font-weight:900;line-height:1}
+.pill.from-F{color:var(--gradF)}.pill.from-D{color:var(--gradD)}.pill.from-C{color:var(--gradC)}
+.pill.to{color:var(--gradA)}
+.pilllab{font-size:12px;color:var(--mut);text-align:center;text-transform:uppercase;letter-spacing:.1em}
+.ar{font-size:34px;color:var(--mut)}
+ul.road{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:760px){ul.road{grid-template-columns:1fr}}
+ul.road li{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:8px;padding:11px 14px;font-size:14.5px}
+.road2 li{border-left-color:var(--good)}
+.cta{text-align:center;padding:40px 0 56px}
+.cta h2{font-size:22px;font-weight:800;margin-bottom:8px}
+.cta p{color:var(--mut);font-size:15px}
+footer{color:var(--mut);font-size:12.5px;text-align:center;padding:22px 0 40px;line-height:1.7}
+</style></head><body>
+<header>
+  <div class="wrap">
+    <div class="eyebrow">Digital Presence Audit</div>
+    <h1>Nick's Roofing</h1>
+    <div class="sub">Prepared for Nick Aroma &middot; nicksroofingservices.com &middot; Hayward, California &middot; CSLB 1119278 &middot; 21 August 2026</div>
+  </div>
 </header>
 
-<div class="grade">
-  <div class="badge"><div class="g">F</div><div class="s">27 / 100</div></div>
-  <div>
-    <h2>You advertise a Free Instant Estimate. There is no form on the website.</h2>
-    <p>Your homepage has zero form fields anywhere on it. Your phone number is not clickable. And the
-    California contractor licence you hold &mdash; number 1119278, active, with a twenty-five thousand
-    dollar bond &mdash; <strong>does not appear anywhere on the site, which California law requires
-    for advertising.</strong> The good news is that all three are quick fixes.</p>
+<div class="wrap">
+
+  <div class="hero">
+    <div class="gradecard gc-F">
+      <div class="bigletter bl-F">F</div>
+      <div class="score100">27 / 100</div>
+    </div>
+    <div class="heroread">
+      <h2>You advertise a Free Instant Estimate. There is no form on the website.</h2>
+      <p>Your homepage has zero form fields anywhere on it. Your phone number is not clickable. And the
+      California contractor licence you hold &mdash; number 1119278, active, with a twenty-five thousand
+      dollar bond &mdash; does not appear anywhere on the site, which California law requires for
+      advertising. <b>All three are quick fixes.</b></p>
+      <span class="tag">You said you need 5&ndash;10 more roofing jobs a month</span>
+    </div>
   </div>
+
+  <section>
+    <div class="h">The Licence Is The One To Fix Today</div>
+    <div class="flag">
+      <div class="lab">California Business &amp; Professions Code &sect;7030.5</div>
+      <p>California requires a licensed contractor to display their licence number <b>in all forms of
+      advertising</b>, and the Contractors State Licence Board treats a website as advertising. We could
+      not find licence 1119278 anywhere on nicksroofingservices.com.</p>
+      <p>Two reasons this matters beyond compliance. Californians are told repeatedly to check a
+      contractor's licence before hiring, and a roofer whose number is not on their site looks like a
+      roofer who does not have one. And you have a <b>genuinely good licence position &mdash; active,
+      bonded at $25,000 &mdash; and you are getting no credit for it.</b></p>
+    </div>
+    <div class="flag">
+      <div class="lab">The estimate you cannot actually request</div>
+      <p>"Free Instant Estimate" appears as a call to action. There is no form behind it &mdash; the link
+      goes to a contact page, and the homepage contains no form fields at all. <b>The word "instant" is
+      doing the opposite of its job.</b> Someone in a hurry clicks, finds no way to submit anything
+      quickly, and goes back to the search results.</p>
+    </div>
+    <div class="flag">
+      <div class="lab">And the number is not tappable &mdash; there are three of them</div>
+      <div class="code">
+<span class="ph">510-815-4451</span>   your website &mdash; plain text, no tel: link
+<span class="ph">(510) 453-3048</span> BuildZoom listing
+<span class="ph">(510) 944-2118</span> contractor listings
+      </div>
+      <p>A homeowner on a phone has to memorise your number and dial it manually. And three numbers in
+      public circulation splits your call tracking and confuses anyone who finds two of them. Pick one
+      and correct the others, or calls keep landing somewhere you are not listening.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="h">The Scorecard &mdash; 12 Categories</div>
+    <div class="grid">
+      <div class="row"><div><div class="rname">Service range</div><div class="sc">Genuinely strong. TPO, PVC, shingle, metal and tile, plus skylights, coatings and storm damage. Wider than most Bay Area roofers.</div><div class="bar"><div class="fill gB" style="width:80%"></div></div></div><div class="badge gB">B</div></div>
+      <div class="row"><div><div class="rname">Photography</div><div class="sc">Real job photography on the site and 63 photos on Yelp. Not organised into projects, no captions or before/after pairing.</div><div class="bar"><div class="fill gC" style="width:50%"></div></div></div><div class="badge gC">C</div></div>
+      <div class="row"><div><div class="rname">Positioning</div><div class="sc">"Family-owned, over 20 years in Hayward" is credible. Stated once, never supported with a story, a year or a face.</div><div class="bar"><div class="fill gC" style="width:50%"></div></div></div><div class="badge gC">C</div></div>
+      <div class="row"><div><div class="rname">Commercial positioning</div><div class="sc">You list TPO and PVC &mdash; commercial systems &mdash; with no commercial page and no route. Property managers have nothing to read.</div><div class="bar"><div class="fill gD" style="width:40%"></div></div></div><div class="badge gD">D</div></div>
+      <div class="row"><div><div class="rname">Contact consistency</div><div class="sc">Three different phone numbers in public circulation. Email is on your own domain, which is good.</div><div class="bar"><div class="fill gD" style="width:30%"></div></div></div><div class="badge gD">D</div></div>
+      <div class="row"><div><div class="rname">Local search</div><div class="sc">Only Hayward named. No pages for San Leandro, Castro Valley, Union City, Fremont or Newark.</div><div class="bar"><div class="fill gD" style="width:30%"></div></div></div><div class="badge gD">D</div></div>
+      <div class="row"><div><div class="rname">Mobile usability</div><div class="sc">No tel: link anywhere. Your number is unclickable text on every page.</div><div class="bar"><div class="fill gF" style="width:10%"></div></div></div><div class="badge gF">F</div></div>
+      <div class="row"><div><div class="rname">Trust and warranty</div><div class="sc">No warranty terms, no insurance detail, no bond amount, no manufacturer certifications. On a re-roof, that is what is being bought.</div><div class="bar"><div class="fill gF" style="width:10%"></div></div></div><div class="badge gF">F</div></div>
+      <div class="row"><div><div class="rname">Enquiry capture</div><div class="sc">Zero form elements on the homepage. The "Free Instant Estimate" CTA links to a contact page rather than opening a form.</div><div class="bar"><div class="fill gF" style="width:2%"></div></div></div><div class="badge gF">F</div></div>
+      <div class="row"><div><div class="rname">Licence display</div><div class="sc">CSLB 1119278 not displayed. California requires it on all advertising, and homeowners are told to check it.</div><div class="bar"><div class="fill gF" style="width:2%"></div></div></div><div class="badge gF">F</div></div>
+      <div class="row"><div><div class="rname">Reviews and proof</div><div class="sc">No testimonials, star rating or review count anywhere. Nothing tells a stranger anyone has hired you before.</div><div class="bar"><div class="fill gF" style="width:2%"></div></div></div><div class="badge gF">F</div></div>
+      <div class="row"><div><div class="rname">Measurement</div><div class="sc">No analytics, no tag manager, no pixel. Nothing is measured, so no visit or lead source can be traced.</div><div class="bar"><div class="fill gF" style="width:2%"></div></div></div><div class="badge gF">F</div></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="h">The Opportunity in Numbers</div>
+    <div class="opp">
+      <div class="ocard"><div class="lab">Two more roofs a month</div><div class="big">$192,000</div><div class="small">per year at an $8,000 average</div></div>
+      <div class="ocard"><div class="lab">Four more a month</div><div class="big">$384,000</div><div class="small">per year</div></div>
+      <div class="ocard"><div class="lab">Six more a month</div><div class="big">$576,000</div><div class="small">per year</div></div>
+    </div>
+    <p class="oppnote">$8,000 is the <b>average permitted project value on your own public permit
+    record</b>, not a figure we invented. Set against roughly $72,000 of permitted work last year, two
+    extra roofs a month is not a marginal improvement &mdash; it is a larger business. And none of it
+    starts until there is a form on the page to capture the enquiry.</p>
+  </section>
+
+  <section>
+    <div class="h">Why This Is A Good Position, Not A Bad One</div>
+    <div class="win">
+      <div class="lab">Read this before the priority list</div>
+      <p><b>Nothing wrong here is about your work or your standing.</b> Your licence is active and
+      bonded. You have fourteen permitted projects on public record. You carry a wider range of roof
+      systems than most of your competition. Twenty years in Hayward is real.</p>
+      <p>Every failure in this audit is a missing piece of plumbing on a website, and all of them are
+      cheap. <b>A form, a clickable phone number, your licence number and your reviews would move you
+      from an F to roughly a C in a single afternoon</b> &mdash; before anyone spends a dollar on
+      advertising.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="h">Where You Sit Against The East Bay</div>
+    <table class="cmp">
+      <tr><th>Firm</th><th>Public review position</th><th>Notes</th></tr>
+      <tr><td><b>Royal Roofing CA</b></td><td><span class="yes">127+ five-star reviews</span> across Google, Yelp and HomeAdvisor</td><td>Hayward focused</td></tr>
+      <tr><td><b>A Better Roofing Company</b></td><td><span class="yes">Top-rated on Google, Yelp and BBB simultaneously</span></td><td>Leads on honesty and craftsmanship</td></tr>
+      <tr><td><b>Simmitri Inc.</b></td><td>Established 1995</td><td>Roofing and solar combined &mdash; a wider offer than most</td></tr>
+      <tr><td><b>The Hayward field overall</b></td><td><b>93 rated contractors averaging 4.6 stars across 3,604 reviews</b> (Diamond Certified)</td><td>Heavily reviewed, heavily contested market</td></tr>
+      <tr class="you"><td><b>Nick's Roofing</b></td><td><span class="no">Zero reviews displayed on your website. None on BuildZoom.</span> Yelp carries 63 photos, no rating surfaced</td><td><span class="yes">BuildZoom score 114 &mdash; 98th percentile</span> of 336,931 California contractors</td></tr>
+    </table>
+    <div class="win" style="margin-top:16px">
+      <div class="lab">The genuinely good news, and it is significant</div>
+      <p><b>BuildZoom rates you 114, which puts you in the 98th percentile of every licensed contractor
+      in California.</b> They advise hiring anyone above 95. You are comfortably clear of that.</p>
+      <p>Almost nobody knows. It is not on your website, and your competitors are winning on review
+      counts rather than on any objective measure of the work.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="h">Estimated Size &mdash; And An Honest Word About The Target</div>
+    <div class="warn">
+      <div class="lab">From public permit and licence records</div>
+      <p><b>Revenue roughly $200,000 to $450,000.</b> As a sole ownership with a small crew, most of the
+      margin is owner earnings rather than net profit in the corporate sense.</p>
+      <p>Public permit records show <b>14 permitted projects over two years &mdash; 5 in 2024 and 9 in
+      2025</b>, at typical project values of $5,000 to $20,000 and an average around $8,000. That is
+      roughly $72,000 of permitted work last year. Repairs, coatings and smaller jobs generally do not
+      require permits and typically run two to four times permitted volume for a roofer your size.
+      <b>The trend is up: nine permitted projects against five is close to a doubling.</b></p>
+    </div>
+    <div class="flag">
+      <div class="lab">The part worth being straight about</div>
+      <p>You said you need <b>five to ten more roofing jobs a month</b>. That is sixty to a hundred and
+      twenty additional jobs a year. Against nine permitted re-roofs last year, that is not an increase
+      in leads &mdash; <b>it is a different size of business</b>: more crews, more trucks, more
+      scheduling, a different cash-flow shape. Achievable, and the market is certainly big enough, but
+      it is a two to three year build rather than something a website or an ad account delivers on its
+      own.</p>
+      <p>A realistic first step from where you are: <b>doubling again, to roughly eighteen to
+      twenty-four permitted jobs</b>, which is what the fixes in this document could support without
+      hiring. Worth having that conversation before anyone quotes you for lead generation.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="h">Projected Grade After Build</div>
+    <div class="arrow">
+      <div><div class="pill from-F">F</div><div class="pilllab">Today &middot; 27</div></div>
+      <div class="ar">&rarr;</div>
+      <div><div class="pill to">A&minus;</div><div class="pilllab">After &middot; 85</div></div>
+    </div>
+    <p class="oppnote" style="text-align:center">The first three items below are an afternoon, and one
+    of them is a legal requirement you are currently missing.</p>
+  </section>
+
+  <section>
+    <div class="h">Priority Roadmap &mdash; Fix First</div>
+    <ul class="road">
+      <li><b>Put CSLB 1119278 on every page.</b> Footer and contact page &mdash; legally required for California advertising, and free credibility you already earned</li>
+      <li><b>Put a real form on the homepage.</b> Roof type, property type, urgency, address, phone &mdash; then "Free Instant Estimate" becomes true</li>
+      <li><b>Make the phone number tappable</b>, and settle on one number across the site, Yelp and BuildZoom</li>
+      <li><b>Put your BuildZoom 114 and your reviews on the site.</b> Ask recent customers for Google reviews</li>
+    </ul>
+    <div class="h" style="margin-top:24px">Build Next &mdash; Compounding Growth</div>
+    <ul class="road road2">
+      <li><b>Warranty and insurance terms</b> &mdash; workmanship warranty length, bond amount, insurance</li>
+      <li><b>A commercial page</b> for TPO and PVC, aimed at property managers</li>
+      <li><b>City pages</b> for San Leandro, Castro Valley, Union City, Fremont and Newark</li>
+      <li><b>Install analytics</b> before any ad spend, so the next dollar can be measured</li>
+    </ul>
+  </section>
+
+  <div class="cta">
+    <h2>98th percentile of every contractor in California, and nobody can tell.</h2>
+    <p>The licence is active, the bond is posted, the permits are on record. The website mentions none
+    of it and offers no way to get in touch.</p>
+  </div>
+
 </div>
-
-<div class="finds">
-  <div class="find"><div class="n">0</div><div class="l">Forms on your homepage, despite advertising a "Free Instant Estimate"</div></div>
-  <div class="find"><div class="n">0</div><div class="l">Tap-to-call links. A homeowner on a phone cannot tap your number to ring you</div></div>
-  <div class="find"><div class="n">0</div><div class="l">Reviews, ratings or testimonials shown anywhere on the site</div></div>
-  <div class="find"><div class="n ok">1119278</div><div class="l">Your active CSLB licence with a $25,000 bond, currently invisible on your own website</div></div>
-</div>
-
-<section>
-  <div class="sec-h"><h2 class="sec">The licence is the one to fix today</h2></div>
-  <div class="call">
-    <span class="call-l">California Business &amp; Professions Code &sect;7030.5</span>
-    <p>California requires a licensed contractor to display their licence number in <strong>all forms
-    of advertising</strong>, and the Contractors State Licence Board treats a website as advertising.
-    <strong>We could not find licence number 1119278 anywhere on nicksroofingservices.com.</strong></p>
-    <p>Two reasons this matters beyond compliance. First, Californians are told repeatedly to check a
-    contractor's licence before hiring, and a roofer whose number is not on their site looks like a
-    roofer who does not have one. Second, <strong>you have a genuinely good licence position</strong>
-    &mdash; active, with a twenty-five thousand dollar bond &mdash; and you are getting no credit for
-    it.</p>
-  </div>
-
-  <div class="call">
-    <span class="call-l">The estimate you cannot actually request</span>
-    <p>"Free Instant Estimate" appears as a call to action. There is no form behind it &mdash; the
-    link goes to a contact page, and the homepage itself contains no form fields at all.</p>
-    <p>So the word "instant" is doing the opposite of its job. Someone in a hurry clicks it, finds no
-    way to submit anything quickly, and goes back to the search results.</p>
-  </div>
-
-  <div class="call">
-    <span class="call-l">And the number is not tappable</span>
-    <p>510-815-4451 appears as plain text with no <code>tel:</code> link, so a homeowner on a phone
-    has to memorise it and dial manually.</p>
-    <p>Separately, your BuildZoom listing carries a different number, <strong>(510) 453-3048</strong>.
-    Two numbers in circulation splits your call tracking and confuses anyone who finds both.</p>
-  </div>
-</section>
-
-<section>
-  <div class="sec-h"><h2 class="sec">The scorecard</h2></div>
-  <div class="tw"><table>
-    <thead><tr><th>Category</th><th>Score</th><th>Grade</th><th>What we found</th></tr></thead><tbody>
-    <tr><td class="cat">Enquiry capture</td><td class="sc">0/10</td><td><span class="pill p-f">F</span></td>
-    <td>Zero form elements on the homepage. The "Free Instant Estimate" call to action links to a contact page rather than opening a form.</td></tr>
-    <tr><td class="cat">Mobile usability</td><td class="sc">1/10</td><td><span class="pill p-f">F</span></td>
-    <td>No <code>tel:</code> link anywhere on the site. Your phone number is unclickable text on every page.</td></tr>
-    <tr><td class="cat">Licence display</td><td class="sc">0/10</td><td><span class="pill p-f">F</span></td>
-    <td>CSLB licence 1119278 not displayed. California requires the licence number on all advertising, and homeowners are advised to check it before hiring.</td></tr>
-    <tr><td class="cat">Reviews and proof</td><td class="sc">0/10</td><td><span class="pill p-f">F</span></td>
-    <td>No testimonials, no star rating, no review count anywhere on the site. Nothing tells a stranger that anyone has hired you before.</td></tr>
-    <tr><td class="cat">Trust and warranty</td><td class="sc">1/10</td><td><span class="pill p-f">F</span></td>
-    <td>No warranty terms, no insurance detail, no bond amount, no manufacturer certifications shown. On a re-roof this is what a homeowner is actually buying.</td></tr>
-    <tr><td class="cat">Measurement</td><td class="sc">0/10</td><td><span class="pill p-f">F</span></td>
-    <td>No analytics, no tag manager, no pixel. Nothing on the site is measured, so there is no way to know how many people visit or where they come from.</td></tr>
-    <tr><td class="cat">Contact consistency</td><td class="sc">3/10</td><td><span class="pill p-d">D</span></td>
-    <td>Two different phone numbers in public circulation. Email is on your own domain, which is good.</td></tr>
-    <tr><td class="cat">Service range</td><td class="sc">8/10</td><td><span class="pill p-a">B</span></td>
-    <td><strong>Genuinely strong.</strong> TPO, PVC, shingle, metal and tile, plus skylights, coatings and storm damage. Residential and commercial. That is a wider capability than most Bay Area roofers advertise.</td></tr>
-    <tr><td class="cat">Photography</td><td class="sc">5/10</td><td><span class="pill p-c">C</span></td>
-    <td>Real job photography exists on the site and on your Yelp listing. It is not organised into projects and carries no captions, locations or before-and-after pairing.</td></tr>
-    <tr><td class="cat">Positioning</td><td class="sc">5/10</td><td><span class="pill p-c">C</span></td>
-    <td>"Family-owned, over 20 years in the Hayward area" is a good, credible line. It is stated once and never supported with a story, a founding year, or a face.</td></tr>
-    <tr><td class="cat">Local search</td><td class="sc">3/10</td><td><span class="pill p-d">D</span></td>
-    <td>Only Hayward is named. No pages for San Leandro, Castro Valley, Union City, Fremont or Newark, which is where the rest of your work sits.</td></tr>
-    <tr><td class="cat">Commercial positioning</td><td class="sc">4/10</td><td><span class="pill p-d">D</span></td>
-    <td>You list TPO and PVC, which are commercial systems, but there is no commercial page and no commercial enquiry route. Property managers have nothing to read.</td></tr>
-  </tbody></table></div>
-</section>
-
-<section>
-  <div class="sec-h"><h2 class="sec">Why this is a good position, not a bad one</h2></div>
-  <div class="call good">
-    <span class="call-l">Read this before the priority list</span>
-    <p><strong>Nothing wrong here is about your work or your standing.</strong> Your licence is active
-    and bonded. You have fourteen permitted projects on public record. You carry a wider range of roof
-    systems than most of your competition. Twenty years in Hayward is real.</p>
-    <p>Every single failure in this audit is a missing piece of plumbing on a website, and all of them
-    are cheap. <strong>A form, a clickable phone number, your licence number and your reviews would
-    move you from an F to roughly a C in a single afternoon</strong> — and that is before anyone
-    spends a dollar on advertising.</p>
-    <p>For five to ten extra jobs a month, that plumbing has to exist first. Otherwise advertising
-    sends people to a page with no way to contact you.</p>
-  </div>
-</section>
-
-<section>
-  <div class="sec-h"><h2 class="sec">Where you sit against the East Bay</h2></div>
-  <p class="lede">Read on 21 August 2026 from public records and directory listings.</p>
-
-  <div class="tw"><table>
-    <thead><tr><th>Firm</th><th>Public review position</th><th>Notes</th></tr></thead><tbody>
-    <tr><td class="cat">Royal Roofing CA</td><td><strong>127+ five-star reviews</strong> across Google, Yelp and HomeAdvisor</td><td>Hayward focused</td></tr>
-    <tr><td class="cat">A Better Roofing Company</td><td>Top-rated across Google, Yelp and BBB simultaneously</td><td>Leads on honesty and craftsmanship</td></tr>
-    <tr><td class="cat">Simmitri Inc.</td><td>Established 1995</td><td>Roofing and solar combined — a wider offer than most</td></tr>
-    <tr><td class="cat">The Hayward field overall</td><td><strong>93 rated roofing contractors averaging 4.6 stars across 3,604 reviews</strong> (Diamond Certified)</td><td>This is a heavily reviewed, heavily contested market</td></tr>
-    <tr style="background:var(--f-soft)"><td class="cat"><strong>Nick's Roofing</strong></td>
-    <td><strong>Zero reviews displayed on your website. None on BuildZoom.</strong> Your Yelp listing carries 63 photos but no rating surfaced to us</td>
-    <td><strong>BuildZoom score 114 — 98th percentile of 336,931 California contractors</strong></td></tr>
-  </tbody></table></div>
-
-  <div class="call good">
-    <span class="call-l">The genuinely good news, and it is significant</span>
-    <p><strong>BuildZoom rates you 114, which puts you in the 98th percentile of every licensed
-    contractor in California.</strong> They advise hiring anyone above 95. You are comfortably clear
-    of that.</p>
-    <p>Almost nobody knows. It is not on your website, and your competitors are winning on review
-    counts rather than on any objective measure of the work.</p>
-  </div>
-
-  <div class="call">
-    <span class="call-l">And a third phone number</span>
-    <p>We now have three numbers publicly attached to your business: <strong>510-815-4451</strong> on
-    your website, <strong>(510) 453-3048</strong> and <strong>(510) 944-2118</strong> on contractor
-    listings. Pick one and correct the others, or calls will keep landing somewhere you are not
-    listening.</p>
-  </div>
-  <p style="font-size:13px;color:var(--faint)">Competitor detail from public directory listings on 21
-  August 2026, not independently verified. Yelp blocked automated access, so no rating or review count
-  could be read from your Yelp listing — worth checking it yourself.</p>
-</section>
-
-<section>
-  <div class="sec-h"><h2 class="sec">Estimated size, and an honest word about the target</h2></div>
-
-  <div class="call slate">
-    <span class="call-l">Estimate</span>
-    <p><strong>Revenue roughly $200,000 to $450,000.</strong> As a sole ownership with a small crew,
-    most of the margin is owner earnings rather than net profit in the corporate sense.</p>
-    <p><strong>How we got there.</strong> Public permit records show <strong>14 permitted projects
-    over two years — 5 in 2024 and 9 in 2025</strong>, with a typical project value of
-    <strong>$5,000 to $20,000 and an average around $8,000</strong>. That is roughly $72,000 of
-    permitted work last year. Repairs, coatings and smaller jobs generally do not require permits and
-    typically run two to four times permitted volume for a roofer your size, which is where the rest
-    of the estimate comes from.</p>
-    <p><strong>The trend is up:</strong> nine permitted projects in 2025 against five in 2024 is
-    close to a doubling.</p>
-  </div>
-
-  <div class="call">
-    <span class="call-l">The part worth being straight about</span>
-    <p>You said you need <strong>five to ten more roofing jobs a month</strong>. That is sixty to a
-    hundred and twenty additional jobs a year.</p>
-    <p>Against nine permitted re-roofs last year, <strong>that is not an increase in leads. It is a
-    different size of business</strong> — more crews, more trucks, more scheduling, and a different
-    cash-flow shape. It is achievable, and the market is certainly big enough. But it is a two to
-    three year build rather than something a website or an ad account delivers on its own.</p>
-    <p>A realistic first step from where you are: <strong>doubling again, to roughly eighteen to
-    twenty-four permitted jobs</strong>, which is what the fixes in this document could support without
-    hiring. That is worth having the conversation about before anyone quotes you for lead
-    generation.</p>
-  </div>
-  <p style="font-size:13px;color:var(--faint)">An estimate from public permit and licence records, not
-  a statement of your accounts. Permit data captures re-roofs and structural work but not most repair
-  jobs, so the true figure is higher than the permitted total.</p>
-</section>
-
-<section>
-  <div class="sec-h"><h2 class="sec">Priority order</h2></div>
-  <ol class="pri">
-    <li><h4>Put your licence number on every page</h4><p>CSLB 1119278 in the footer and on the contact page. It is a legal requirement for advertising in California and it is free credibility you already earned.</p></li>
-    <li><h4>Put a real form on the homepage</h4><p>Roof type, property type, urgency, address and phone. Then "Free Instant Estimate" becomes true instead of a dead end.</p></li>
-    <li><h4>Make the phone number tappable</h4><p>A <code>tel:</code> link in the header and footer, and settle on one number across the website, Yelp and BuildZoom.</p></li>
-    <li><h4>Get your reviews visible</h4><p>Your Yelp listing has photos and history. Ask recent customers for Google reviews and put the rating and count on the site.</p></li>
-    <li><h4>Add warranty and insurance terms</h4><p>Workmanship warranty length, bond amount and insurance. On a re-roof this is most of what the homeowner is deciding between.</p></li>
-    <li><h4>Build the commercial page and the neighbouring city pages</h4><p>TPO and PVC deserve their own page for property managers, and San Leandro, Castro Valley, Union City, Fremont and Newark are free ground you are not competing for.</p></li>
-  </ol>
-</section>
 
 <footer>
-  Prepared by AG1 Consulting, 21 August 2026, for Nick Aroma of Nick's Roofing, 27517 Orlando Ave,
-  Hayward, CA 94545.<br>
-  Findings taken directly from nicksroofingservices.com and its page source on that date. Licence
-  number, status, bond amount and permit count are as published on public contractor records. The
-  advertising requirement referenced is California Business &amp; Professions Code &sect;7030.5; confirm
-  the current wording with the CSLB before relying on it.
+  Prepared by Andrei Givero &middot; AG1 Consulting &middot; 21 August 2026<br>
+  For Nick Aroma of Nick's Roofing, 27517 Orlando Ave, Hayward, CA 94545. Findings taken directly from
+  nicksroofingservices.com and its page source on that date. Licence number, status, bond amount and
+  permit count are as published on public contractor records. The advertising requirement referenced is
+  California Business &amp; Professions Code &sect;7030.5; confirm the current wording with the CSLB
+  before relying on it. Yelp blocked automated access, so no rating or review count could be read from
+  your Yelp listing. Revenue figures are estimates from public permit data, not statements of account
+  and not a guarantee.
 </footer>
-</div></body></html>
+</body></html>
